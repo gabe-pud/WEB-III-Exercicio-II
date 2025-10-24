@@ -1,0 +1,39 @@
+body, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header h1 {
+    color: green; 
+}
+
+#title {
+    justify-content: center;
+    display: flex;
+}
+
+#title img{
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+nav {
+    margin: auto 0;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    padding: 0 20px;
+}

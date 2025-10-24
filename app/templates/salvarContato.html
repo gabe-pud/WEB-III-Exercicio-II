@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+
+{% block titulo %}Cadastrar Contato{% endblock titulo %}
+
+{% block conteudo %}
+    <h1>Cadastrar Contato</h1>
+    <form action="{% url 'salvarContato' %}" method="post"> {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+        
+    
+    </form>
+{% endblock conteudo %}

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} {% endblock %} </title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    <header>
+        <div id="title">
+            <img src="{% static 'images/images.png' %}" alt="">
+            <h1>Framework Django</h1>
+        </div>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'sobre' %}">Sobre</a>
+            <a href="#">Galeria</a>
+            <a href="{% url 'contato' %}">Contato</a>
+        </nav>
+    </header>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+</body>
+</html>

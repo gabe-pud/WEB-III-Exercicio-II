@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block titulo %}Contatos{% endblock titulo %}
+{% block conteudo %}
+    <h1>Contatos</h1>
+    <section>
+        <a href="{% url 'salvarContato' %}">Adicionar Contato</a>
+        <br><br>
+
+        {% for contato in contatos  %}
+            <p>Nome: {{contato.nome}}</p>
+            <p>Email: {{contato.email}} </P>
+            <p>Assunto: {{contato.assunto}} </P>
+            <p>Mensagem: {{contato.mensagem}} </P>
+
+            <a href="{% url 'excluirContato' contato.id %}">Excluir</a>
+            <br><br>
+        {% endfor %}
+    </section>
+{% endblock conteudo %}
